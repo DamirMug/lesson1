@@ -1,14 +1,53 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 	
+	
+
+
+
+
 	var numbers = [];
 
 	for(var i = 0; i < 5; i++){
-		var randomNum = parseInt(Math.random()*100);
-		numbers.push(randomNum);
+		var randomNum = parseInt(Math.random()* 100)
+	
+		numbers.push(randomNum)
 	}
+	
 	document.write(numbers)
+	//for(var i = 0; numbers < 5; i++ );
+		
+
 	
+	alert("Запомните числа и их порядок: "+ numbers);
+
+	var userAnswer = +prompt("Каким было первое число?");
 	
+	if(userAnswer == numbers[0]){
+		alert("Правильно!");
+	}else {
+		alert("А вот и нет. Правильный ответ" + numbers[0]);
+	}
+
+	userAnswer = +prompt("А какое последнее?");
+	//alert(numbers[4]);
+	//alert(numbers.length); // их 5 значений
+	//alert(numbers[numbers.length - 1]);
+
+	if (userAnswer == numbers[numbers.length -1]){
+		alert("Правильно!");
+	}else {
+		alert("А вот и нет. Правильный ответ" + numbers[numbers.length - 1] );
+	}
 	
+	var n = parseInt(Math.random()* numbers.length);
+		
+	userAnswer = +prompt("назовите" + (n + 1) );		
+	if(userAnswer == numbers[n]){
+		alert("правильно!");
+	}else{
+		alert("А вот и нет. Правильный ответ" + numbers[n]);
+	}
+
+
 </script>
