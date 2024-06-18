@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-group">
+        <h3>Умножение чисел</h3>
+        <label for="inp_1">Введите АКБ:</label>
+        <input type="text" class="form-control" id="inp_1">
+        <label for="inp_2">Введите КОД:</label>
+        <input type="text" class="form-control" id="inp_2">
+    </div>
+        
+        
+        <button onclick="myFunction(1)">Create Button</button>
+        <div id="button-container"></div>
+<script>
+    function multi(){
+    var a =document.getElementById('inp_1').value ;
+    var b = document.getElementById('inp_2').value;
+    var c = a + b;
+    alert("создан элемент" + c);
+    return c;
+    
+}
+
+    
+   
+    function myFunction(r){
+        var blockNumber = multi();
+        for(let i = 0; i< r; i++){
+            let newBtn = document.createElement('div');
+            newBtn.createAttribute('id');
+            let oldBtn = document.createElement('h')
+            newBtn.innerText="создан елемент" + blockNumber;
+            blockNumber++;
+            oldBtn.innerText = blockNumber;
+            document.querySelector('#button-container').appendChild(newBtn).appendChild(oldBtn);
+    }
+}
+
+var h = document.getElementsByTagName('h');
+if (h.length > 0) {
+    h = h[0];
+    alert(h.innerText || h.textContent);
+ 
+    if (void 0 != h.innerText)
+        h.innerText = 'Новый текст';
+    else
+        h.textContent = 'Новый текст';
+}
+function append_to_p(div_name, data){ 
+            document.getElementById(div_name).innerText += data; 
+        } 
+</script>
+</body>
+</html>
+
